@@ -1,0 +1,13 @@
+[project]
+name = "stttrails"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastrtc[stt,tts,vad]>=0.0.21",
+    "langchain-core>=0.3.54",
+    "langchain-ollama>=0.3.2",
+    "langgraph>=0.3.31",
+]
