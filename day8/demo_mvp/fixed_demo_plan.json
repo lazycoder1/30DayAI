@@ -1,0 +1,39 @@
+[
+  {
+    "type": "mouse",
+    "action": "click",
+    "target_description": "the '1' button",
+    "coordinates": {
+      "x": 767,
+      "y": 793
+    }
+  },
+  {
+    "type": "mouse",
+    "action": "click",
+    "target_description": "the '+' button",
+    "coordinates": {
+      "x": 855,
+      "y": 705
+    }
+  },
+  {
+    "type": "mouse",
+    "action": "click",
+    "target_description": "the '2' button",
+    "coordinates": {
+      "x": 855,
+      "y": 793
+    }
+  },
+  {
+    "type": "mouse",
+    "action": "click",
+    "target_description": "the '=' button",
+    "coordinates": {
+      "x": 942,
+      "y": 793
+    },
+    "pause_after": 1.5
+  }
+]

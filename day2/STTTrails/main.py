@@ -16,11 +16,12 @@ import time
 import tempfile
 import wave
 
-from langchain_ollama.llms import OllamaLLM
-from langchain_ollama.chat_models import ChatOllama
+from langchain.chat_models import init_chat_model
+from langchain_core.messages import HumanMessage, SystemMessage
 load_dotenv()
 
-llm = OllamaLLM(model="llama2-uncensored:7b")
+model = init_chat_model("deepseek-r1:8b", model_provider="ollama")
+
 # groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 tts_client = get_tts_model(model="kokoro")
 stt_model = get_stt_model(model="moonshine/base")
@@ -30,6 +31,11 @@ options = KokoroTTSOptions(
     speed=1.0,
     lang="en-us"
 )
+
+messages = [
+    SystemMessage("You are a sarcastic teenager , that uses curse words with every message."),
+    HumanMessage("Hello, how the fuck are you?")
+]
 
 
 def generate_response(
